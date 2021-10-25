@@ -1,3 +1,4 @@
+require('dotenv').config();
 const aedes = require('aedes')();
 const server = require('net').createServer(aedes.handle);
 const httpServer = require('http').createServer();

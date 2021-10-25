@@ -21,9 +21,9 @@ httpServer.listen(wsPort, function () {
     console.log('websocket server listening on port ', wsPort);
 });
 
-aedes.authenticate = function (client, username, password, callback) {
-    callback(null, username === 'matteo' && password.toString() === 'test');
-};
+// aedes.authenticate = function (client, username, password, callback) {
+//     callback(null, username === process.env.B_USERNAME && password.toString() === process.env.B_PASSWORD);
+// };
 
 aedes.on('clientError', (client, err) => {
     console.log('client error', client.id, err.message, err.stack);
